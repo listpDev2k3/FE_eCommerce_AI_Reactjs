@@ -1,15 +1,20 @@
-import React from 'react'
-
+import React, { use } from "react";
 import styles from "./ProductCard.module.scss";
 
-const ProductCard = ({ product }) => (
-  <div className={styles.card}>
-    {/* <img src={product.image} alt={product.name} />
-    <h3>{product.name}</h3>
-    <p>{product.shortDesc}</p>
-    <button>Xem chi tiết</button> */}
-    <h1>product</h1>
-  </div>
-);
+const ProductCard = ({ products }) => {
+  const countProducts = products.length
+  console.log(countProducts)
+  return (
+    <div>
+      {products.map((product) => (
+        <div key={product.id}>
+          <h3>{product.name}</h3>
+          <p>{product.shortDesc}</p>
+          <img src={product.image} alt={product.name} />
+        </div>
+      ))}
+    </div>
+  );
+};
 
-export default ProductCard
+export default ProductCard;

@@ -245,3 +245,5 @@ const mockProducts = [
     category: "Vật Lý",
   },
 ];
+
+export default mockProducts;
