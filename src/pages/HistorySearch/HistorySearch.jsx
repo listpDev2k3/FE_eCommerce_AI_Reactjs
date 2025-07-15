@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProductModal = () => {
+const HistorySearch = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const ProductModal = () => {
   )
 }
 
-export default ProductModal
+export default HistorySearch
