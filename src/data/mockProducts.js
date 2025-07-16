@@ -461,7 +461,7 @@ const mockProducts = [
   {
     id: "math-10",
     name: "Tài liệu luyện thi Đại học môn Toán",
-    price: 210000,
+    price: 1200000,
     image: "../../../public/assets/image/english.jpg",
     mainImage: "../../../public/assets/image/english.jpg",
     sliderImages: [
@@ -607,7 +607,7 @@ const mockProducts = [
   {
     id: "phys-6",
     name: "Thiên văn học cơ bản",
-    price: 180000,
+    price: 2000000,
     image: "../../../public/assets/image/english.jpg",
     mainImage: "../../../public/assets/image/english.jpg",
     sliderImages: [

@@ -9,7 +9,6 @@ const ProductDetail = () => {
   const [error, setError] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeOwlDot, setActiveOwlDot] = useState(0);
-  const [activeOwlDotBaner, setActiveOwlDotBaner] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [activeImg, setActiveImg] = useState("");
   const { id } = useParams();
@@ -43,13 +42,11 @@ const ProductDetail = () => {
     });
   };
 
-  // Chọn hình ảnh phụ
   const getUrlMainImg = (index) => {
     setActiveImg(product.sliderImages[index]);
     setActiveOwlDot(index);
   };
 
-  // Skeleton loading
   if (loading) {
     return (
       <div className={styles.container}>
@@ -143,7 +140,7 @@ const ProductDetail = () => {
             </div>
             <button>Đặt hàng</button>
             <button>
-              <img src="/assets/icon/paypal.svg" alt="Paypal" />
+              Thanh Toán
             </button>
           </div>
         </div>
@@ -151,9 +148,9 @@ const ProductDetail = () => {
           <div className={styles.product_detai}>
             <div className={styles.product_detai_wrapper}>
               <div className={styles.pape_breadcrumb}>
-                <span>Trang chủ</span>
-                <span>{product.category}</span>
-                <span>{product.name}</span>
+                <span>Trang chủ &gt;  </span>
+                <span> &gt;  {product.category}</span>
+                <span> &gt; {product.name}</span>
               </div>
               <h3>{product.name}</h3>
               <p>Hãy là người đầu tiên đánh giá sản phẩm này</p>
@@ -236,65 +233,10 @@ const ProductDetail = () => {
             <br />
             <span>{product.description}</span>
           </div>
-          <img
-            src={product.mainImage}
-            alt={product.name}
-            className={styles.baner_img}
-          />
-          <div className={styles.owl__dots}>
-            {product.sliderImages.map((_, index) => (
-              <button
-                key={index}
-                className={
-                  activeOwlDotBaner === index ? styles.activeOwlDot : ""
-                }
-                onClick={() => setActiveOwlDotBaner(index)}
-              >
-                <span></span>
-              </button>
-            ))}
-          </div>
         </div>
       </section>
-      <section>
-        <div className={styles.baner_wrapper}>
-          <div className={styles.input_items}>
-            <div>
-              <span>Hỗ trợ sản phẩm</span>
-              <span>→</span>
-            </div>
-            <div>
-              <span>Câu hỏi thường gặp</span>
-              <span>→</span>
-            </div>
-            <div>
-              <span>Hướng dẫn mua hàng</span>
-              <span>→</span>
-            </div>
-          </div>
-          <img
-            src="/assets/image/imgSuport.png"
-            alt="Support"
-            className={styles.baner_img}
-          />
-        </div>
-      </section>
-      <section style={{ background: "#0e0f10" }}>
-        <div className={styles.baner_wrapper}>
-          <div className={styles.featues}>
-            <h3>Đặc điểm sản phẩm</h3>
-            <span>{product.description}</span>
-          </div>
-          <ul className={styles.featues_items}>
-            <li>
-              <img src={product.mainImage} alt="Book cover" />
-              <span>
-                <b>{product.name}</b> - {product.shortDesc}
-              </span>
-            </li>
-          </ul>
-        </div>
-      </section>
+
+
     </>
   );
 };

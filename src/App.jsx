@@ -2,9 +2,10 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Favorites from "./pages/Favorites/Favorites";
-import Header from "./components/Header/Header"; // tùy theo bạn để ở đâu
+import Header from "./components/Header/Header"; 
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import HistorySearch from "./pages/HistorySearch/HistorySearch";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
@@ -15,7 +16,9 @@ const App = () => {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/history" element={<HistorySearch />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
+      <ToastContainer position="top-right" />
     </div>
   );
 };

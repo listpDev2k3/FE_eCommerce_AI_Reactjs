@@ -157,7 +157,7 @@ const Header = () => {
                     <a href="">Tài khoản của tôi</a>
                   </span>
                   <span>
-                    <a href="">Danh sách yêu thích</a>
+                    <a href="/favorites">Danh sách yêu thích</a>
                   </span>
                   <span>
                     <a href="">So sánh</a>

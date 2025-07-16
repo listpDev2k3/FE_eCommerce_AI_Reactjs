@@ -80,7 +80,6 @@
         &:hover {
           span {
             font-weight: 600;
-            font-size: 16px;
             cursor: pointer;
           }
         }
@@ -229,6 +228,64 @@
 
     &:hover {
       background-color: #125ca1;
+    }
+  }
+}
+.active {
+  span {
+    font-weight: 700;
+    font-size: 16px;
+    color: #0156ff;
+  }
+}
+
+.applyButton {
+  width: 100%;
+  height: 37px;
+  border-radius: 50px;
+  border: 2px solid #a2a6b0;
+  background: #e0e2e6;
+  color: #a2a6b0;
+  font-weight: 600;
+  margin: 12px 0;
+  cursor: not-allowed;
+
+  &.activeApply {
+    background-color: #0156ff;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.active_clear {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 2px solid #f5c6cb;
+}
+
+.selectedFiltersBox {
+  background-color: #e9f0ff;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0156ff;
+  border-left: 4px solid #0156ff;
+
+  .clearBoxBtn {
+    background-color: transparent;
+    border: none;
+    color: #d32f2f;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 8px;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
