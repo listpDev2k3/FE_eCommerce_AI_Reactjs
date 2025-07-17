@@ -17,7 +17,6 @@ FE_eCommerce_AI_Reactjs/
 │   ├── components/       # Các component dùng lại (ProductCard, Header,...)
 │   ├── pages/            # Các trang chính (Home, ProductDetail, Favorites,...)
 │   ├── services/         # Cấu hình gọi API bằng Axios
-│   ├── utils/            # Hàm tiện ích (format price, debounce,...)
 │   ├── App.jsx           # Router chính
 │   └── main.jsx          # Điểm khởi chạy React
 ├── .env                  # Biến môi trường
