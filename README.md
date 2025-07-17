@@ -1,12 +1,35 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Đây là frontend dự án thương mại điện tử tích hợp AI, được xây dựng bằng ReactJS, sử dụng Vite
 
-Currently, two official plugins are available:
+### 1. **Yêu cầu hệ thống**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js >= 18
+- npm >= 9 hoặc yarn/pnpm
 
-## Expanding the ESLint configuration
+### 2. **Chạy dự án ở môi trường phát triển**
+-npm run dev -> Mở trình duyệt và truy cập: http://localhost:3000
+### 3. ** Cấu trúc thư mục chính **
+FE_eCommerce_AI_Reactjs/
+├── public/               # Ảnh, favicon,...
+├── src/
+│   ├── assets/           # Ảnh, icon,...
+│   ├── components/       # Các component dùng lại (ProductCard, Header,...)
+│   ├── pages/            # Các trang chính (Home, ProductDetail, Favorites,...)
+│   ├── services/         # Cấu hình gọi API bằng Axios
+│   ├── utils/            # Hàm tiện ích (format price, debounce,...)
+│   ├── App.jsx           # Router chính
+│   └── main.jsx          # Điểm khởi chạy React
+├── .env                  # Biến môi trường
+├── vite.config.js        # Cấu hình vite
+└── package.json
+### 4. ** Tính năng nổi bật **
+- Danh sách sản phẩm, chi tiết sản phẩm
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Yêu thích sản phẩm: nhấn vào icon Yêu Thích trong mỗi sản phẩm khi bạn hover vào , sẽ thêm vào danh sách yêu thích , để vào trang danh sách yêu thích, nhấn vào avata người dùng -> tới mục yêu thích sản phẩm 
+
+- Gợi ý sản phẩm phù hợp dựa trên hành vi người dùng: Tôi tạo ra 1 nút dể người dùng có thể nhấn vào để đưa ra các sản phẩm gợi ý theo danh sách yêu thích trong trang danh sách yêu thích 
+
+- Tương tác với backend RESTful API
+### 5. ** Clone dự án về máy **
+- git clone https://github.com/listpDev2k3/FE_eCommerce_AI_Reactjs.git
