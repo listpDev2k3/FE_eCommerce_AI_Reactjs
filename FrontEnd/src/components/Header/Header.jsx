@@ -1,7 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useSelector } from "react-redux";
+import { Link } from 'react-router-dom';
 import styles from "./Header.module.scss";
 
 const Header = () => {
+  const cartItems = useSelector((state) => state.cart.items);
+  const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const [searchInput, setSearchInput] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -133,13 +137,18 @@ const Header = () => {
             </div>
 
             <div className={styles.cart_icon_wrapper}>
-              <img
-                src="/assets/icon/shopping-cart.svg"
-                alt="Cart"
-                width="28"
-                height="28"
-                style={{ cursor: "pointer" }}
-              />
+              <Link to="/cart">
+                <img
+                  src="/assets/icon/shopping-cart.svg"
+                  alt="Cart"
+                  width="28"
+                  height="28"
+                  style={{ cursor: "pointer" }}
+                />
+                {totalItems > 0 && (
+                  <span className={styles.cart_badge}>{totalItems}</span>
+                )}
+              </Link>
             </div>
 
             <div>

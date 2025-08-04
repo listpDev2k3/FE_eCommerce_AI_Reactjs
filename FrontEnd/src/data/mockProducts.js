@@ -4,12 +4,12 @@ const mockProducts = [
     id: "eng-1",
     name: "English Grammar in Use",
     price: 150000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Hướng dẫn ngữ pháp tiếng Anh cơ bản.",
     category: "Tiếng Anh",
@@ -28,12 +28,12 @@ const mockProducts = [
     id: "eng-2",
     name: "4000 Essential English Words",
     price: 180000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Từ vựng thiết yếu cho người học.",
     category: "Tiếng Anh",
@@ -52,12 +52,12 @@ const mockProducts = [
     id: "eng-3",
     name: "Oxford Advanced Learner’s Dictionary",
     price: 320000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Từ điển tiếng Anh cho học sinh nâng cao.",
     category: "Tiếng Anh",
@@ -76,12 +76,12 @@ const mockProducts = [
     id: "eng-4",
     name: "Collins English for Business",
     price: 210000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Tiếng Anh giao tiếp trong kinh doanh.",
     category: "Tiếng Anh",
@@ -100,12 +100,12 @@ const mockProducts = [
     id: "eng-5",
     name: "Cambridge IELTS 15",
     price: 250000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Tài liệu luyện thi IELTS mới nhất.",
     category: "Tiếng Anh",
@@ -124,12 +124,12 @@ const mockProducts = [
     id: "eng-6",
     name: "Vocabulary for IELTS",
     price: 190000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Từ vựng luyện thi IELTS theo chủ đề.",
     category: "Tiếng Anh",
@@ -148,12 +148,12 @@ const mockProducts = [
     id: "eng-7",
     name: "Practice Makes Perfect: English Verbs",
     price: 130000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Thực hành động từ tiếng Anh hiệu quả.",
     category: "Tiếng Anh",
@@ -172,12 +172,12 @@ const mockProducts = [
     id: "eng-8",
     name: "English Idioms in Use",
     price: 170000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Học thành ngữ tiếng Anh thông dụng.",
     category: "Tiếng Anh",
@@ -196,12 +196,12 @@ const mockProducts = [
     id: "eng-9",
     name: "Speak English Like an American",
     price: 230000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Tiếng Anh giao tiếp chuẩn người Mỹ.",
     category: "Tiếng Anh",
@@ -220,12 +220,12 @@ const mockProducts = [
     id: "eng-10",
     name: "English Pronunciation in Use",
     price: 160000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Rèn luyện phát âm chuẩn.",
     category: "Tiếng Anh",
@@ -246,12 +246,12 @@ const mockProducts = [
     id: "math-1",
     name: "Giải tích 12 nâng cao",
     price: 120000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Tổng hợp lý thuyết và bài tập giải tích lớp 12.",
     category: "Toán học",
@@ -270,12 +270,12 @@ const mockProducts = [
     id: "math-2",
     name: "Tư duy logic toán học",
     price: 110000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Phát triển tư duy giải quyết vấn đề.",
     category: "Toán học",
@@ -294,12 +294,12 @@ const mockProducts = [
     id: "math-3",
     name: "Hình học không gian 3D",
     price: 140000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Ôn luyện hình học nâng cao.",
     category: "Toán học",
@@ -318,12 +318,12 @@ const mockProducts = [
     id: "math-4",
     name: "Toán tư duy Singapore",
     price: 180000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Toán dành cho học sinh tiểu học.",
     category: "Toán học",
@@ -342,12 +342,12 @@ const mockProducts = [
     id: "math-5",
     name: "Số học vui",
     price: 90000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Khơi gợi tình yêu toán học qua trò chơi.",
     category: "Toán học",
@@ -366,12 +366,12 @@ const mockProducts = [
     id: "math-6",
     name: "Olympic toán quốc tế",
     price: 200000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Tuyển tập đề thi toán quốc tế.",
     category: "Toán học",
@@ -390,12 +390,12 @@ const mockProducts = [
     id: "math-7",
     name: "Đại số tuyến tính cơ bản",
     price: 170000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Giáo trình đại học về đại số tuyến tính.",
     category: "Toán học",
@@ -414,12 +414,12 @@ const mockProducts = [
     id: "math-8",
     name: "Toán cao cấp",
     price: 190000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Tài liệu toán nâng cao cho đại học.",
     category: "Toán học",
@@ -438,12 +438,12 @@ const mockProducts = [
     id: "math-9",
     name: "Logic toán học hiện đại",
     price: 150000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Nhập môn logic và cấu trúc toán.",
     category: "Toán học",
@@ -462,12 +462,12 @@ const mockProducts = [
     id: "math-10",
     name: "Tài liệu luyện thi Đại học môn Toán",
     price: 1200000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Đầy đủ đề thi, bài tập luyện tập.",
     category: "Toán học",
@@ -488,12 +488,12 @@ const mockProducts = [
     id: "phys-1",
     name: "Vật lý cơ bản 10",
     price: 130000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Lý thuyết và bài tập vật lý lớp 10.",
     category: "Vật Lý",
@@ -512,12 +512,12 @@ const mockProducts = [
     id: "phys-2",
     name: "Chuyên đề điện học",
     price: 150000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Tổng hợp kiến thức điện học lớp 11-12.",
     category: "Vật Lý",
@@ -536,12 +536,12 @@ const mockProducts = [
     id: "phys-3",
     name: "Vật lý lượng tử nhập môn",
     price: 220000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Khám phá thế giới lượng tử.",
     category: "Vật Lý",
@@ -560,12 +560,12 @@ const mockProducts = [
     id: "phys-4",
     name: "Bài tập vật lý phổ thông",
     price: 110000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Sách bài tập theo chương trình THPT.",
     category: "Vật Lý",
@@ -584,12 +584,12 @@ const mockProducts = [
     id: "phys-5",
     name: "Cơ học Newton",
     price: 160000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Tìm hiểu định luật chuyển động.",
     category: "Vật Lý",
@@ -608,12 +608,12 @@ const mockProducts = [
     id: "phys-6",
     name: "Thiên văn học cơ bản",
     price: 2000000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Giới thiệu vũ trụ và các hành tinh.",
     category: "Vật Lý",
@@ -632,12 +632,12 @@ const mockProducts = [
     id: "phys-7",
     name: "Vật lý đại cương",
     price: 200000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Giáo trình cho sinh viên năm nhất.",
     category: "Vật Lý",
@@ -656,12 +656,12 @@ const mockProducts = [
     id: "phys-8",
     name: "Nhiệt động lực học",
     price: 170000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Nhiệt học và các định luật nhiệt.",
     category: "Vật Lý",
@@ -680,12 +680,12 @@ const mockProducts = [
     id: "phys-9",
     name: "Từ trường và cảm ứng điện từ",
     price: 140000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Tìm hiểu các hiện tượng điện từ.",
     category: "Vật Lý",
@@ -704,12 +704,12 @@ const mockProducts = [
     id: "phys-10",
     name: "Luyện thi Đại học môn Lý",
     price: 190000,
-    image: "../../../public/assets/image/english.jpg",
-    mainImage: "../../../public/assets/image/english.jpg",
+    image: "/assets/image/english.jpg",
+    mainImage: "/assets/image/english.jpg",
     sliderImages: [
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg",
-      "../../../public/assets/image/english.jpg"
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg",
+      "/assets/image/english.jpg"
     ],
     shortDesc: "Ôn luyện chuyên sâu cho kỳ thi.",
     category: "Vật Lý",

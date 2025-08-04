@@ -241,3 +241,32 @@ body {
     cursor: pointer;
   }
 }
+
+.cart_icon_wrapper {
+  position: relative;
+  margin-right: 20px;
+
+  img {
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.cart_badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ff0000;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
