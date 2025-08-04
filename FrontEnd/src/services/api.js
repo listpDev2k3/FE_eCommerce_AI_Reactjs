@@ -1,3 +1,14 @@
+// import axios from 'axios';
+
+// // Khởi tạo instance axios trỏ về Strapi backend
+// const api = axios.create({
+//   baseURL: 'http://localhost:1337/api',
+//   timeout: 5000,
+// });
+
+
+// export default api;
+
 
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';

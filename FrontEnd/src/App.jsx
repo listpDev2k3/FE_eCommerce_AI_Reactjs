@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import HistorySearch from "./pages/HistorySearch/HistorySearch";
 import { ToastContainer } from "react-toastify";
+import AddProduct from "./pages/AddProduct/AddProduct";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/history" element={<HistorySearch />} />
         <Route path="/favorites" element={<Favorites />} />
+        <Route path="/add-book" element={<AddProduct />} />
       </Routes>
       <ToastContainer position="top-right" />
     </div>

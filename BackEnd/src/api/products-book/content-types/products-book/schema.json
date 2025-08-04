@@ -1,0 +1,107 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products_books",
+  "info": {
+    "singularName": "products-book",
+    "pluralName": "products-books",
+    "displayName": "ProductsBook"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_product": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Toán",
+        "Văn",
+        "Anh"
+      ]
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "discount": {
+      "type": "integer",
+      "default": 0
+    },
+    "author": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "year": {
+      "type": "date"
+    },
+    "language": {
+      "type": "enumeration",
+      "enum": [
+        "Tiếng Việt ",
+        "English ",
+        "French"
+      ]
+    },
+    "pages": {
+      "type": "integer"
+    },
+    "format": {
+      "type": "enumeration",
+      "enum": [
+        "Bìa mềm ",
+        "Bìa cứng",
+        "PDF"
+      ]
+    },
+    "dimensions": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "decimal"
+    },
+    "supplier": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "mainImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sliderImages": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tags": {
+      "type": "string"
+    },
+    "favorites_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::favorites-user.favorites-user",
+      "mappedBy": "products_book"
+    }
+  }
+}
