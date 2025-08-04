@@ -8,12 +8,24 @@ const Home = () => {
   const [products, setProducts] = useState([]);
   const [selectedPriceFilter, setSelectedPriceFilter] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    api
-      .get("/products")
-      .then((res) => setProducts(res.data))
-      .catch((err) => console.error(err));
+    const fetchProducts = async () => {
+      try {
+        setLoading(true);
+        const res = await api.get("/products-books?populate=%2A");
+        setProducts(res.data.data || []);
+      } catch (err) {
+        console.error("Lỗi khi lấy sản phẩm:", err);
+        setError("Không thể tải sản phẩm lúc này");
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    fetchProducts();
   }, []);
 
   const clearAllFilters = () => {
@@ -134,6 +146,8 @@ const Home = () => {
       </div>
 
       <div className={styles.product_grid}>
+        {loading && <div>Đang tải sản phẩm...</div>}
+        {error && <div className="error">{error}</div>}
         {(selectedPriceFilter || selectedCategory) && (
           <div className={styles.selectedFiltersBox}>
             <span>

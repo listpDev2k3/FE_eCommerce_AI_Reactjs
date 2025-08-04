@@ -20,12 +20,26 @@ const Favorites = () => {
     const fetchFavorites = async () => {
       try {
         setLoading(true);
-        const requests = favoriteIds.map((id) => api.get(`/products/${id}`));
+        const requests = favoriteIds.map((id) => 
+          api.get(`/products-books/${id}?populate=*`)
+        );
         const responses = await Promise.all(requests);
-        const data = responses.map((res) => res.data);
+        
+        // Map data từ Strapi
+        const data = responses.map((res) => {
+          const product = res.data.data;
+          return {
+            id: product.id,
+            name: product.title,
+            price: product.price,
+            mainImage: product.mainImage?.url ? `http://localhost:1337${product.mainImage.url}` : "/assets/image/english.jpg",
+            shortDesc: product.description?.[0]?.children?.[0]?.text?.substring(0, 100) + "..."
+          };
+        });
+        
         setFavoriteProducts(data);
       } catch (err) {
-        setError("Không thể lấy danh sách sản phẩm yêu thích.");
+        setError("Không thể lấy danh sách yêu thích");
       } finally {
         setLoading(false);
       }
@@ -42,10 +56,16 @@ const Favorites = () => {
   const handleGetSuggestions = async () => {
     try {
       setLoading(true);
-      const res = await api.get(`/suggestions?userId=${userId}`);
-      setSuggestedProducts(res.data);
+      const res = await api.get(`/products-books?populate=*&pagination[limit]=4`);
+      const suggestions = res.data.data.map(product => ({
+        id: product.id,
+        name: product.title,
+        price: product.price,
+        mainImage: product.mainImage?.url ? `http://localhost:1337${product.mainImage.url}` : "/assets/image/english.jpg"
+      }));
+      setSuggestedProducts(suggestions);
     } catch (err) {
-      setError("Không thể lấy gợi ý lúc này.");
+      setError("Không thể lấy gợi ý");
     } finally {
       setLoading(false);
     }

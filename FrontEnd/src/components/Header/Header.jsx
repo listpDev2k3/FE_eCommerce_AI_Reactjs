@@ -83,19 +83,16 @@ const Header = () => {
 
       <div className={styles.header__last}>
         <div className={styles.header__last__container}>
-          <img
-            src="/assets/image/logo.png"
-            alt="Logo"
-            width="60"
-            height="60"
-            className={styles.header__logo}
-          />
+          <Link to="/" className="logo">
+            <img src="/assets/logo.png" alt="Logo" />
+          </Link>
 
           <nav className={styles.nav}>
-            <a href="/">Books</a>
-            <a href="/">About</a>
-            <a href="/">Contact</a>
-            <a href="/">Blog</a>
+            <Link to="/">Trang chủ</Link>
+            <Link to="/favorites">Yêu thích</Link>
+            <Link to="/cart">Giỏ hàng</Link>
+            <Link to="/add-book">Thêm sách</Link>
+            <Link to="/history">Lịch sử</Link>
           </nav>
 
           <div
@@ -112,10 +109,11 @@ const Header = () => {
               mobileMenuOpen ? styles.active : ""
             }`}
           >
-            <a href="/">Books</a>
-            <a href="/">About</a>
-            <a href="/">Contact</a>
-            <a href="/">Blog</a>
+            <Link to="/">Trang chủ</Link>
+            <Link to="/favorites">Yêu thích</Link>
+            <Link to="/cart">Giỏ hàng</Link>
+            <Link to="/add-book">Thêm sách</Link>
+            <Link to="/history">Lịch sử</Link>
           </nav>
 
           <div className={styles.header__last__cartUser}>

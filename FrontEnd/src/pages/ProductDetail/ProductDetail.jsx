@@ -13,24 +13,61 @@ const ProductDetail = () => {
   const [activeImg, setActiveImg] = useState("");
   const { id } = useParams();
   
-  console.log(id);
+  console.log('Product ID from URL:', id); // Debug ID
+  
   useEffect(() => {
     const fetchProduct = async () => {
       try {
         setLoading(true);
-        const response = await api.get(`/products/${id}`);
-        setProduct(response.data);
-        setActiveImg(response.data.mainImage);
+        console.log('Fetching product with ID:', id);
+        
+        // Dùng filter để tìm theo id
+        const response = await api.get(`/products-books?filters[id][$eq]=${id}&populate=*`);
+        console.log('API Response:', response.data);
+        
+        const productData = response.data.data[0]; // Lấy phần tử đầu tiên từ array
+        
+        if (!productData) {
+          setError("Không tìm thấy sản phẩm");
+          return;
+        }
+        
+        // Map data từ Strapi sang format component cần
+        const mappedProduct = {
+          id: productData.id,
+          documentId: productData.documentId,
+          name: productData.title,
+          title: productData.title,
+          price: productData.price,
+          discount: productData.discount,
+          author: productData.author,
+          publisher: productData.publisher,
+          year: productData.year,
+          language: productData.language,
+          pages: productData.pages,
+          format: productData.format,
+          dimensions: productData.dimensions,
+          weight: productData.weight,
+          supplier: productData.supplier,
+          category: productData.category,
+          tags: productData.tags,
+          mainImage: productData.mainImage?.url ? `http://localhost:1337${productData.mainImage.url}` : "/assets/image/english.jpg",
+          sliderImages: productData.sliderImages?.map(img => `http://localhost:1337${img.url}`) || ["/assets/image/english.jpg"],
+          description: productData.description?.[0]?.children?.[0]?.text || "Chưa có mô tả"
+        };
+        
+        console.log('Mapped product:', mappedProduct);
+        setProduct(mappedProduct);
+        setActiveImg(mappedProduct.mainImage);
       } catch (err) {
-        setError(
-          err.response?.data?.message ||
-            "Không thể lấy thông tin sản phẩm lúc này"
-        );
+        console.error('API Error:', err);
+        setError("Không thể lấy thông tin sản phẩm");
       } finally {
         setLoading(false);
       }
     };
-    fetchProduct();
+    
+    if (id) fetchProduct();
   }, [id]);
 
   // Điều khiển số lượng
@@ -48,39 +85,20 @@ const ProductDetail = () => {
   };
 
   if (loading) {
+    return <div>Đang tải sản phẩm...</div>;
+  }
+
+  if (error) {
     return (
-      <div className={styles.container}>
-        <div className={styles.section__top}>
-          <div className={styles.about_product_breadcrumb}>
-            <div className="skeleton-tab"></div>
-            <div className="skeleton-tab"></div>
-            <div className="skeleton-tab"></div>
-          </div>
-        </div>
-        <div className={styles.wrapper}>
-          <div className={styles.product_detai}>
-            <div className={styles.product_detai_wrapper}>
-              <div className="skeleton-title"></div>
-              <div className="skeleton-text"></div>
-              <div className="skeleton-text short"></div>
-            </div>
-          </div>
-          <div className={styles.product_image}>
-            <div className="skeleton-image"></div>
-            <div className={styles.owl__dots}>
-              {[...Array(3)].map((_, i) => (
-                <button key={i} className="skeleton-dot"></button>
-              ))}
-            </div>
-          </div>
-        </div>
+      <div style={{ padding: '20px', textAlign: 'center' }}>
+        <h2>Lỗi: {error}</h2>
+        <button onClick={() => window.history.back()}>Quay lại</button>
       </div>
     );
   }
 
-  // Thông báo lỗi
-  if (error) {
-    return <div className="error">{error}</div>;
+  if (!product) {
+    return <div>Không tìm thấy sản phẩm</div>;
   }
 
   return (
