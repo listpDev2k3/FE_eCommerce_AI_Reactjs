@@ -23,7 +23,8 @@
       "enum": [
         "Toán",
         "Văn",
-        "Anh"
+        "Anh",
+        "Vật Lý"
       ]
     },
     "price": {
@@ -97,11 +98,9 @@
     "tags": {
       "type": "string"
     },
-    "favorites_users": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::favorites-user.favorites-user",
-      "mappedBy": "products_book"
+    "new": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

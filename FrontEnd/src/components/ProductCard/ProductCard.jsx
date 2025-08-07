@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import styles from "./ProductCard.module.scss";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cart/cartSlice";
+import { addToFavorites } from "../../store/favorites/favoritesSlice";
+
 
 const ProductCard = ({ products }) => {
   const dispatch = useDispatch();
@@ -12,7 +14,7 @@ const ProductCard = ({ products }) => {
       {products.map((product) => (
         <div key={product.id} className={styles.product_item}>
           <div className={styles.overlay}></div>
-          <div className={styles.favorite_icon}>
+          <div className={styles.favorite_icon} onClick={()=>{dispatch(addToFavorites(product))}}>
             <img src="/assets/icon/tym.svg" alt="Yêu thích" />
           </div>
 

@@ -68,12 +68,6 @@
     },
     "title": {
       "type": "string"
-    },
-    "favorites_users": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::favorites-user.favorites-user",
-      "mappedBy": "users_permissions_user"
     }
   }
 }

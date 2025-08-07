@@ -25,14 +25,13 @@ const ProductDetail = () => {
         const response = await api.get(`/products-books?filters[id][$eq]=${id}&populate=*`);
         console.log('API Response:', response.data);
         
-        const productData = response.data.data[0]; // Lấy phần tử đầu tiên từ array
+        const productData = response.data.data[0];
         
         if (!productData) {
           setError("Không tìm thấy sản phẩm");
           return;
         }
         
-        // Map data từ Strapi sang format component cần
         const mappedProduct = {
           id: productData.id,
           documentId: productData.documentId,

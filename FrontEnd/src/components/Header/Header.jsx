@@ -33,7 +33,8 @@ const Header = () => {
   };
 
   return (
-    <header className={`${styles.header} ${styles.max_width}`}>
+    <header className={styles.header}>
+      {/* Top bar */}
       <div className={styles.header__top}>
         <div className={styles.header__top_wrap}>
           <div>
@@ -41,60 +42,41 @@ const Header = () => {
               Mon-Thu: <span style={{ color: "white" }}>9:00 AM - 5:30 PM</span>
             </span>
           </div>
-
           <div>
             Visit our showroom in 19 Nguyễn Du, P7, Gò Vấp, TPHCM
-            <a href="tel:0987556203">Contact Us</a>
+            <a href="tel:0987556203"> | Contact Us</a>
           </div>
-
           <div>
             Call Us: 0987556203
             <div className={styles.wrap_icon_fb_instag}>
-              <a
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/assets/icon/facebook.svg"
-                  alt="Facebook"
-                  width="20"
-                  height="20"
-                  className={styles.header__top_iconFacebook}
-                />
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/icon/facebook.svg" alt="Facebook" width="20" height="20" />
               </a>
-              <a
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/assets/icon/instagram.svg"
-                  alt="Instagram"
-                  width="20"
-                  height="20"
-                  className={styles.header__top_iconInstagram}
-                />
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/icon/instagram.svg" alt="Instagram" width="20" height="20" />
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <div className={styles.header__last}>
-        <div className={styles.header__last__container}>
-          <Link to="/" className="logo">
-            <img src="/assets/logo.png" alt="Logo" />
+      {/* Main header */}
+      <div className={styles.header__main}>
+        <div className={styles.header__main_container}>
+          
+          <Link to="/" className={styles.logo}>
+            <img src="/assets/image/logo.png" alt="Logo" />
           </Link>
 
           <nav className={styles.nav}>
-            <Link to="/">Trang chủ</Link>
+            <Link to="/" className={styles.nav_link_home}>Trang chủ</Link>
             <Link to="/favorites">Yêu thích</Link>
             <Link to="/cart">Giỏ hàng</Link>
             <Link to="/add-book">Thêm sách</Link>
             <Link to="/history">Lịch sử</Link>
           </nav>
 
+          {/* Mobile hamburger */}
           <div
             className={styles.hamburger}
             onClick={() => setMobileMenuOpen((prev) => !prev)}
@@ -104,77 +86,57 @@ const Header = () => {
             <span></span>
           </div>
 
-          <nav
-            className={`${styles.mobile_nav} ${
-              mobileMenuOpen ? styles.active : ""
-            }`}
-          >
-            <Link to="/">Trang chủ</Link>
-            <Link to="/favorites">Yêu thích</Link>
-            <Link to="/cart">Giỏ hàng</Link>
-            <Link to="/add-book">Thêm sách</Link>
-            <Link to="/history">Lịch sử</Link>
+          {/* Mobile nav */}
+          <nav className={`${styles.mobile_nav} ${mobileMenuOpen ? styles.active : ""}`}>
+            <Link to="/" onClick={() => setMobileMenuOpen(false)}>Trang chủ</Link>
+            <Link to="/favorites" onClick={() => setMobileMenuOpen(false)}>Yêu thích</Link>
+            <Link to="/cart" onClick={() => setMobileMenuOpen(false)}>Giỏ hàng</Link>
+            <Link to="/add-book" onClick={() => setMobileMenuOpen(false)}>Thêm sách</Link>
+            <Link to="/history" onClick={() => setMobileMenuOpen(false)}>Lịch sử</Link>
           </nav>
 
-          <div className={styles.header__last__cartUser}>
-            <div className={styles.search_input_wrapper}>
+          {/* Right side: Search, Cart, User */}
+          <div className={styles.header__actions}>
+            {/* Search */}
+            <div className={styles.search_wrapper}>
               <input
                 type="text"
                 placeholder="Tìm kiếm sản phẩm..."
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
                 onKeyDown={handleSearchKeyPress}
+                className={styles.search_input}
               />
-              <img
-                src="/assets/icon/gg_search.svg"
-                alt="search icon"
-                width="24"
-                height="24"
-                style={{ cursor: "pointer" }}
-              />
+              <button className={styles.search_btn}>
+                <img src="/assets/icon/gg_search.svg" alt="search" width="20" height="20" />
+              </button>
             </div>
 
-            <div className={styles.cart_icon_wrapper}>
-              <Link to="/cart">
-                <img
-                  src="/assets/icon/shopping-cart.svg"
-                  alt="Cart"
-                  width="28"
-                  height="28"
-                  style={{ cursor: "pointer" }}
-                />
-                {totalItems > 0 && (
-                  <span className={styles.cart_badge}>{totalItems}</span>
-                )}
-              </Link>
-            </div>
+            {/* Cart */}
+            <Link to="/cart" className={styles.cart_wrapper}>
+              <img src="/assets/icon/shopping-cart.svg" alt="Cart" width="24" height="24" />
+              {totalItems > 0 && (
+                <span className={styles.cart_badge}>{totalItems}</span>
+              )}
+            </Link>
 
-            <div>
+            {/* User */}
+            <div className={styles.user_wrapper} ref={dropdownRef}>
               <img
                 src="/assets/image/avataUser.svg"
                 alt="User"
-                width="36"
-                height="36"
+                width="32"
+                height="32"
                 onClick={handleUserClick}
-                style={{ cursor: "pointer" }}
+                className={styles.user_avatar}
               />
               {showUserDropdown && (
                 <div className={styles.user_dropdown}>
-                  <span>
-                    <a href="">Tài khoản của tôi</a>
-                  </span>
-                  <span>
-                    <a href="/favorites">Danh sách yêu thích</a>
-                  </span>
-                  <span>
-                    <a href="">So sánh</a>
-                  </span>
-                  <span>
-                    <a href="">Đăng nhập</a>
-                  </span>
-                  <span>
-                    <a href="">Lịch sử tìm kiếm</a>
-                  </span>
+                  <Link to="/profile">Tài khoản của tôi</Link>
+                  <Link to="/favorites">Danh sách yêu thích</Link>
+                  <Link to="/compare">So sánh</Link>
+                  <Link to="/login">Đăng nhập</Link>
+                  <Link to="/history">Lịch sử tìm kiếm</Link>
                 </div>
               )}
             </div>

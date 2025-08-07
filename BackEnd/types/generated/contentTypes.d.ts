@@ -373,42 +373,6 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiFavoritesUserFavoritesUser
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'favorites_users';
-  info: {
-    displayName: 'FavoritesUser';
-    pluralName: 'favorites-users';
-    singularName: 'favorites-user';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::favorites-user.favorites-user'
-    > &
-      Schema.Attribute.Private;
-    products_book: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::products-book.products-book'
-    >;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    users_permissions_user: Schema.Attribute.Relation<
-      'manyToOne',
-      'plugin::users-permissions.user'
-    >;
-  };
-}
-
 export interface ApiProductsBookProductsBook
   extends Struct.CollectionTypeSchema {
   collectionName: 'products_books';
@@ -422,17 +386,15 @@ export interface ApiProductsBookProductsBook
   };
   attributes: {
     author: Schema.Attribute.String;
-    category: Schema.Attribute.Enumeration<['To\u00E1n', 'V\u0103n', 'Anh']>;
+    category: Schema.Attribute.Enumeration<
+      ['To\u00E1n', 'V\u0103n', 'Anh', 'V\u1EADt L\u00FD']
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Blocks;
     dimensions: Schema.Attribute.String;
     discount: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
-    favorites_users: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::favorites-user.favorites-user'
-    >;
     format: Schema.Attribute.Enumeration<
       ['B\u00ECa m\u1EC1m ', 'B\u00ECa c\u1EE9ng', 'PDF']
     >;
@@ -447,6 +409,7 @@ export interface ApiProductsBookProductsBook
     > &
       Schema.Attribute.Private;
     mainImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    new: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     pages: Schema.Attribute.Integer;
     price: Schema.Attribute.Decimal & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
@@ -934,10 +897,6 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
-    favorites_users: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::favorites-user.favorites-user'
-    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -979,7 +938,6 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::favorites-user.favorites-user': ApiFavoritesUserFavoritesUser;
       'api::products-book.products-book': ApiProductsBookProductsBook;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
